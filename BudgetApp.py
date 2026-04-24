@@ -21,7 +21,7 @@ class Category:
     def check_funds(self, amount):
         return amount <= self.get_balance()
     
-    def transfer(self, amount, destination):
+    def transfer(self, amount, destination):# The amount transfer Ed is smaller that'll the total palance
         if self.check_funds(amount):
             self.withdraw(amount, f'Transfer to {destination.name}')
             destination.deposit(amount, f'Transfer from {self.name}')
